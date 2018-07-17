@@ -42,9 +42,9 @@ class Dog
   end
 end
 
-  def self.create
+  def self.create(attributes_hash)
     sql = <<-SQL
-
+      
     SQL
 
     DB[:conn].execute(sql)
