@@ -90,8 +90,7 @@ end
       WHERE name = ?
     SQL
 
-  @id = DB[:conn].execute(sql, self.name, self.breed)
-  dog
-
+    DB[:conn].execute(sql, name).map do |row|
+      self.name 
   end
 end
