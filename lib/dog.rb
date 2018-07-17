@@ -94,4 +94,12 @@ end
       self.new_from_db(row)
   end.first
 end
-end 
+
+  def update
+    sql = <<-SQL
+      UPDATE TABLE dogs
+    SQL
+
+    DB[:conn].execute(sql)
+  end
+end
