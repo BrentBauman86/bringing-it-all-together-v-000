@@ -91,6 +91,6 @@ end
     SQL
 
     DB[:conn].execute(sql, name).map do |row|
-      self.name 
+      self.new_from_db(row)
   end
 end
