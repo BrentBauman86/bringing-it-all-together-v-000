@@ -43,10 +43,9 @@ class Dog
 end
 
   def self.create(attributes_hash)
-    sql = <<-SQL
-      attributes_hash.each {|key, value| self.send(("#{key}=", value)}
-      attributes_hash.save 
-    SQL
+    dog = self.new(attributes_hash)
+    dog.save
+    dog
 
     DB[:conn].execute(sql)
   end
