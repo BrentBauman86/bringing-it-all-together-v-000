@@ -39,7 +39,13 @@ class Dog
     DB[:conn].execute(sql, self.name, self.breed)
   end
 
+  def self.create
+    sql = <<-SQL
 
+    SQL
+
+    DB[:conn].execute(sql)
+  end
 
 
 
