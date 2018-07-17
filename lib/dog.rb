@@ -29,11 +29,14 @@ class Dog
   end
 
   def save
+    if self.id
+      self.update
+    else
     sql = <<-SQL
 
     SQL
 
-DB[:conn].execute(sql, self.name, self.breed)
+    DB[:conn].execute(sql, self.name, self.breed)
   end
 
 
