@@ -46,8 +46,6 @@ end
     dog = self.new(attributes_hash)
     dog.save
     dog
-
-    DB[:conn].execute(sql)
   end
 
 #   def self.find_or_create_by
