@@ -100,6 +100,6 @@ end
       UPDATE dogs SET name = ?, breed = ? WHERE id = ?
     SQL
 
-    DB[:conn].execute(sql)
+    DB[:conn].execute(sql, self.name, self.breed, self.id)
   end
 end
