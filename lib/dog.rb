@@ -48,8 +48,9 @@ end
     dog
   end
 
-  def self.find_by_id
-    
+  def self.find_by_id(id)
+    dog = self.new(id)
+    dog 
   end
 
   def self.new_from_db
