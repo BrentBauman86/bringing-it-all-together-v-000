@@ -50,12 +50,12 @@ end
 
   def self.find_by_id(id)
     dog = self.new(id)
-    dog 
+    dog
   end
 
-  def self.new_from_db
-
-  end
+  # def self.new_from_db
+  # 
+  # end
 
 #   def update
 #
