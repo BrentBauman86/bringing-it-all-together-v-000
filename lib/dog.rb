@@ -4,8 +4,8 @@ class Dog
   attr_reader :id
 
   def initialize(:name => "name", :breed => "breed", id=nil)
-    @name = name
-    @breed = breed
+    @name = dog[:name]
+    @breed = dog[:breed]
     @id = id
   end
 
