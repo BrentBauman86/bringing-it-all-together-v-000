@@ -62,10 +62,10 @@ end
     sql = <<-SQL
       SELECT * FROM dogs
       WHERE name = ? AND breed = ?
-      
     SQL
 
-    DB[:conn].execute(sql).map
+    DB[:conn].execute(sql).map do |row|
+
   end
 
   def self.new_from_db(row)
