@@ -44,7 +44,8 @@ end
 
   def self.create(attributes_hash)
     sql = <<-SQL
-      
+      attributes_hash.each {|key, value| self.send(("#{key}=", value)}
+      attributes_hash.save 
     SQL
 
     DB[:conn].execute(sql)
