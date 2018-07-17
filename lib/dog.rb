@@ -97,7 +97,7 @@ end
 
   def update
     sql = <<-SQL
-      UPDATE TABLE dogs
+      UPDATE  dogs
     SQL
 
     DB[:conn].execute(sql)
