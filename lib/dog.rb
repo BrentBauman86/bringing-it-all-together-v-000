@@ -9,11 +9,31 @@ class Dog
     @id = id
   end
 
+  def self.create_table
+    sql = <<-SQL 
+      CREATE TABLE dog 
+      id PRIMARY KEY INTEGER 
+      VALUES name TEXT,
+      breed TEXT
+    SQL
 
+    DB[:conn].execute(sql)
+  end
 
+  def self.drop_table
+    sql = <<-SQL 
+      DROP TABLE dog 
+    SQL
 
+    DB[:conn].execute(sql)
+  end
 
+  def self.save 
+    sql = <<-SQL 
 
+    SQL  
+
+  end
 
 
 
