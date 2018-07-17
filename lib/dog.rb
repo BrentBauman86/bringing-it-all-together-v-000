@@ -90,7 +90,7 @@ end
       WHERE name = ?
     SQL
 
-  dog = DB[:conn].execute(sql, name)
+  @id = DB[:conn].execute(sql, self.name, self.breed)
   dog
 
   end
