@@ -41,15 +41,15 @@ class Dog
     self
   end
 end
-#
-#   def self.create
-#     sql = <<-SQL
-#
-#     SQL
-#
-#     DB[:conn].execute(sql)
-#   end
-#
+
+  def self.create
+    sql = <<-SQL
+
+    SQL
+
+    DB[:conn].execute(sql)
+  end
+
 #   def self.find_or_create_by
 #
 #   end
