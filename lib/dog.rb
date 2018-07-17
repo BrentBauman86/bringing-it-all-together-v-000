@@ -48,14 +48,14 @@ end
     dog
   end
 
-#   def self.find_or_create_by
-#
-#   end
-#
-#   def self.new_from_db
-#
-#   end
-#
+  def self.find_by_id
+    
+  end
+
+  def self.new_from_db
+
+  end
+
 #   def update
 #
 #   end
