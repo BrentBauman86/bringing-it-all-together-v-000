@@ -31,7 +31,8 @@ class Dog
       self.update
     else
     sql = <<-SQL
-
+      INSERT INTO dogs (name, breed)
+      VALUES (?, ?)
     SQL
 
     DB[:conn].execute(sql, self.name, self.breed)
