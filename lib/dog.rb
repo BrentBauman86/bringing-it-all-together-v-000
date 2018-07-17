@@ -97,7 +97,7 @@ end
 
   def update
     sql = <<-SQL
-      UPDATE dogs SET 
+      UPDATE dogs SET name = ?, grade = ? WHERE id = ?
     SQL
 
     DB[:conn].execute(sql)
