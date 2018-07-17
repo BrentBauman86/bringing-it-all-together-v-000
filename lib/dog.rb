@@ -59,7 +59,14 @@ end
   end
 
   def self.new_from_db
+    sql = <<-SQL
+      new_dog = 
+      new_dog.name = ?
+      new_dog.breed =
 
+    SQL
+
+    DB[:conn].execute(sql)
   end
 
 #   def update
