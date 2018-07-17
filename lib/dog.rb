@@ -58,13 +58,12 @@ end
     end.first
   end
 
-  def self.new_from_db
-    sql = <<-SQL
-      new_dog = 
-      new_dog.name = ?
-      new_dog.breed =
-
-    SQL
+  def self.new_from_db(row)
+    attributes_hash = {
+      :id => row[0],
+      :name => row[1],
+      :breed => row[2]
+    }
 
     DB[:conn].execute(sql)
   end
