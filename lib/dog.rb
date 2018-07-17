@@ -10,9 +10,9 @@ class Dog
   end
 
   def self.create_table
-    sql = <<-SQL 
-      CREATE TABLE dog 
-      id PRIMARY KEY INTEGER 
+    sql = <<-SQL
+      CREATE TABLE dog
+      id PRIMARY KEY INTEGER
       VALUES name TEXT,
       breed TEXT
     SQL
@@ -21,17 +21,17 @@ class Dog
   end
 
   def self.drop_table
-    sql = <<-SQL 
-      DROP TABLE dog 
+    sql = <<-SQL
+      DROP TABLE dog
     SQL
 
     DB[:conn].execute(sql)
   end
 
-  def self.save 
-    sql = <<-SQL 
+  def save
+    sql = <<-SQL
 
-    SQL  
+    SQL
 
   end
 
