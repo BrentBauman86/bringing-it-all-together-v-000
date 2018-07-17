@@ -59,7 +59,11 @@ end
   end
 
   def self.find_or_create_by
+    sql = <<-SQL
 
+    SQL
+
+    DB[:conn].execute(sql).map
   end
 
   def self.new_from_db(row)
