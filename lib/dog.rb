@@ -64,7 +64,9 @@ end
       WHERE name = ? AND breed = ?
     SQL
 
-    DB[:conn].execute(sql, name, breed).first do |row|
+    dog = DB[:conn].execute(sql, name, breed).first
+
+    if dog 
 
   end
 
