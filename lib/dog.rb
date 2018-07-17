@@ -54,6 +54,7 @@ end
     SQL
 
     DB[:conn].execute(sql, self.id)
+    self
   end
 
   # def self.new_from_db
