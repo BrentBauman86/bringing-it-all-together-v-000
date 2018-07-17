@@ -77,9 +77,9 @@ end
   def self.new_from_db(row)
 binding.pry
     attributes_hash = {
-      :id => row[0],
-      :name => row[1],
-      :breed => row[2]
+      :id => row[1],
+      :name => row[2],
+      :breed => row[3]
     }
     self.new(attributes_hash)
   end
