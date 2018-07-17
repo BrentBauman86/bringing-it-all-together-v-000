@@ -7,16 +7,16 @@ class Dog
     self.id ||= nil
   end
 
-#   def self.create_table
-#     sql = <<-SQL
-#       CREATE TABLE dog
-#       id PRIMARY KEY INTEGER
-#       VALUES name TEXT,
-#       breed TEXT
-#     SQL
-#
-#     DB[:conn].execute(sql)
-#   end
+  def self.create_table
+    sql = <<-SQL
+      CREATE TABLE dog
+      id PRIMARY KEY INTEGER
+      VALUES name TEXT,
+      breed TEXT
+    SQL
+
+    DB[:conn].execute(sql)
+  end
 #
 #   def self.drop_table
 #     sql = <<-SQL
