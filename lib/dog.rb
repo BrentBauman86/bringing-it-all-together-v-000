@@ -53,8 +53,9 @@ end
       SELECT * FROM dogs WHERE id = ?
     SQL
 
-    DB[:conn].execute(sql, self.id)
-    self
+    DB[:conn].execute(sql, id).map do |row|
+    
+    end
   end
 
   # def self.new_from_db
