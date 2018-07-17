@@ -63,14 +63,12 @@ end
   end
 
   def self.new_from_db(row)
-    new_dog = self.new(row[1], row[2], row[0])
-      self.new(row)
-    # attributes_hash = {
-    #   :id => row[0],
-    #   :name => row[1],
-    #   :breed => row[2]
-    # }
-    # self.new(attributes_hash)
+    attributes_hash = {
+      :id => row[0],
+      :name => row[1],
+      :breed => row[2]
+    }
+    self.new(attributes_hash)
   end
 
 #   def update
